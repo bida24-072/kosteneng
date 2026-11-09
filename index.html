@@ -3,62 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KO STENENG | Lounge & Restaurant</title>
-    <!-- Import Elegant Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Ko Steneng | Bar & Grill</title>
+    <!-- Premium Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Top Navigation -->
-    <header>
-        <div class="logo-small">KO <span>STENENG</span></div>
-        
-        <nav class="desktop-nav">
-            <a href="#">BAR MENU</a>
-            <a href="#">FOOD MENU</a>
-            <a href="#">GALLERY</a>
-            <a href="#">RESERVE</a>
-            <a href="#" class="btn-outline">ORDER NOW</a>
-        </nav>
-
-        <div class="menu-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <!-- Dark blurred background image (simulating Zen Cafe) -->
-        <div class="bg-image"></div>
-        <div class="overlay"></div>
-
-        <!-- Bokeh / Lens Flare Effects -->
-        <div class="flare flare-1"></div>
-        <div class="flare flare-2"></div>
-
-        <div class="hero-content">
-            <!-- Center Logo -->
-            <div class="center-logo">
-                <div class="logo-circle">
-                    <h2>KO</h2>
-                    <p>STENENG</p>
+    <!-- Sticky Navbar -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <!-- Placeholder for their actual logo. You can replace the src with the actual logo image -->
+            <div class="logo-area">
+                <span class="logo-s">S</span>
+                <div class="logo-text">
+                    <h2>KO STENENG</h2>
+                    <p>BAR & GRILL</p>
                 </div>
             </div>
+            
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#menu">The Grill</a></li>
+                <li><a href="#location">Location</a></li>
+            </ul>
+            
+            <a href="https://facebook.com" target="_blank" class="nav-btn">Book a Table</a>
+        </div>
+    </nav>
 
-            <!-- Main Typography -->
-            <h1>Where Every Moment<br><span>Finds Its Atmosphere.</span></h1>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <!-- The moody steak image you provided -->
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=2000&auto=format&fit=crop" alt="Premium Grilled Steak">
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+            <p class="subtitle">Welcome to Tlokweng's Finest</p>
+            <h1>Flame Grilled.<br>Perfectly Poured.</h1>
+            <p class="desc">Experience the warmth of the fire and the chill of the perfect sundowner. Located at Plot 17597, Tlokweng.</p>
+            <a href="#events" class="cta-btn">Explore The Vibe</a>
         </div>
     </section>
 
-    <!-- Scroll indicator -->
-    <div class="scroll-down">
-        <p>SCROLL</p>
-        <div class="line"></div>
+    <!-- Infinite Marquee -->
+    <div class="marquee">
+        <div class="marquee-content">
+            <span>PREMIUM GRILL</span><span class="dot">•</span>
+            <span>SUNDOWNER SATURDAYS</span><span class="dot">•</span>
+            <span>POSH FRIDAYS</span><span class="dot">•</span>
+            <span>CRAFT COCKTAILS</span><span class="dot">•</span>
+            <span>PREMIUM GRILL</span><span class="dot">•</span>
+            <span>SUNDOWNER SATURDAYS</span><span class="dot">•</span>
+            <span>POSH FRIDAYS</span><span class="dot">•</span>
+            <span>CRAFT COCKTAILS</span><span class="dot">•</span>
+        </div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Events Section (Based on Facebook posts) -->
+    <section id="events" class="section">
+        <div class="section-header">
+            <h2>Weekly Experiences</h2>
+            <p>From premium sundowners to high-energy nights.</p>
+        </div>
+
+        <div class="events-grid">
+            <!-- Event 1 -->
+            <div class="event-card">
+                <div class="event-img">
+                    <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=800&auto=format&fit=crop" alt="Posh Fridays">
+                    <div class="date-badge">FRI</div>
+                </div>
+                <div class="event-info">
+                    <h3>Posh Fridays</h3>
+                    <p>Kick off the weekend with premium cocktails, great music, and Tlokweng's best dressed.</p>
+                    <span class="time">6:00 PM Till Late</span>
+                </div>
+            </div>
+
+            <!-- Event 2 -->
+            <div class="event-card">
+                <div class="event-img">
+                    <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=800&auto=format&fit=crop" alt="Sundowner Saturdays">
+                    <div class="date-badge">SAT</div>
+                </div>
+                <div class="event-info">
+                    <h3>Sundowner Saturdays</h3>
+                    <p>Watch the sun go down in style. Live acoustic sessions and grilled platters to share.</p>
+                    <span class="time">4:00 PM - 10:00 PM</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu / The Grill Section -->
+    <section id="menu" class="split-section">
+        <div class="split-img">
+            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1000&auto=format&fit=crop" alt="Grilled Food">
+        </div>
+        <div class="split-content">
+            <h2>The Taste of the Flame</h2>
+            <p>We believe in real fire. Our grill master uses only the finest cuts, kissed by open flames to seal in the juices. From sizzling steaks to our famous flame-grilled pizzas.</p>
+            <ul class="menu-highlights">
+                <li>Signature Flame-Grilled T-Bone</li>
+                <li>Smokey BBQ Pork Ribs</li>
+                <li>Wood-Fired Artisan Pizzas</li>
+            </ul>
+            <a href="https://facebook.com" target="_blank" class="outline-btn">View Full Menu on Facebook</a>
+        </div>
+    </section>
+
+    <!-- Location & Contact -->
+    <section id="location" class="section contact-section">
+        <div class="contact-box">
+            <h2>Find Us</h2>
+            <div class="contact-details">
+                <p><strong>Address:</strong><br>Plot 17597, Tlokweng<br>Botswana</p>
+                <p><strong>Website:</strong><br><a href="https://facebook.com" target="_blank">facebook.com/kosteneng</a></p>
+                <p><strong>Hours:</strong><br>Tue - Sun: 12:00 PM - Late</p>
+            </div>
+            <a href="https://maps.google.com/?q=Plot+17597+Tlokweng+Botswana" target="_blank" class="cta-btn">Get Directions</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="logo-area">
+            <span class="logo-s">S</span>
+            <div class="logo-text">
+                <h2>KO STENENG</h2>
+                <p>BAR & GRILL</p>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2024 Ko Steneng Bar & Grill. All Rights Reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
 </body>
 </html>
