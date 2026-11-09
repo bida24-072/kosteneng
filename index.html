@@ -3,24 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EMBER | Premium Lounge</title>
+    <title>KO STENENG | Lounge & Restaurant</title>
+    <!-- Import Elegant Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script type="importmap">
-        { "imports": { "three": "https://unpkg.com/three@0.160.0/build/three.module.js" } }
-    </script>
 </head>
 <body>
 
-    <!-- The 3D Smoke Canvas -->
-    <div id="canvas-container"></div>
+    <!-- Top Navigation -->
+    <header>
+        <div class="logo-small">KO <span>STENENG</span></div>
+        
+        <nav class="desktop-nav">
+            <a href="#">BAR MENU</a>
+            <a href="#">FOOD MENU</a>
+            <a href="#">GALLERY</a>
+            <a href="#">RESERVE</a>
+            <a href="#" class="btn-outline">ORDER NOW</a>
+        </nav>
 
-    <!-- The Content that gets revealed -->
-    <div class="content">
-        <h1 class="logo">EMBER</h1>
-        <p class="subtitle">Gaborone's Premier Lounge</p>
-        <a href="#" class="btn">Enter the Experience</a>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- Dark blurred background image (simulating Zen Cafe) -->
+        <div class="bg-image"></div>
+        <div class="overlay"></div>
+
+        <!-- Bokeh / Lens Flare Effects -->
+        <div class="flare flare-1"></div>
+        <div class="flare flare-2"></div>
+
+        <div class="hero-content">
+            <!-- Center Logo -->
+            <div class="center-logo">
+                <div class="logo-circle">
+                    <h2>KO</h2>
+                    <p>STENENG</p>
+                </div>
+            </div>
+
+            <!-- Main Typography -->
+            <h1>Where Every Moment<br><span>Finds Its Atmosphere.</span></h1>
+        </div>
+    </section>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-down">
+        <p>SCROLL</p>
+        <div class="line"></div>
     </div>
 
-    <script type="module" src="main.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
