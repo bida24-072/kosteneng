@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #050505;
+    color: white;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    overflow: hidden; /* Prevent scrolling */
+    height: 100vh;
+    width: 100vw;
+    cursor: crosshair; /* Cool custom cursor */
+}
+
+/* 3D Canvas sits in the background */
+#canvas-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* The text and button sit on top, but we make them transparent initially */
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+    pointer-events: none; /* Let mouse pass through to the smoke */
+    
+    /* Initially hidden/dim */
+    opacity: 0.3;
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+/* When the user interacts, the content becomes fully visible */
+body.revealed .content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.05);
+    pointer-events: auto; /* Enable clicking the button */
+}
+
+.logo {
+    font-size: 6rem;
+    font-weight: 900;
+    letter-spacing: 15px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 30px rgba(255, 50, 50, 0.8); /* Red Neon Glow */
+    color: #fff;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #d4af37; /* Gold */
+    margin-bottom: 40px;
+}
+
+.btn {
+    padding: 15px 40px;
+    background: transparent;
+    border: 1px solid #d4af37;
+    color: #d4af37;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    pointer-events: none; /* Only clickable when revealed */
+}
+
+body.revealed .btn {
+    pointer-events: auto;
+}
+
+.btn:hover {
+    background: #d4af37;
+    color: #000;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+}
